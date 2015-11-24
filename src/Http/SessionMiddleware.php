@@ -29,7 +29,10 @@ final class SessionMiddleware
      */
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response, callable $next = null)
     {
-        $this->session->start();
+        if (!$this->session->isStarted()) {
+            $this->session->start();
+        }
+
         $request = $request->withAttribute('session', $this->session);
 
         if ($next) {

@@ -1,5 +1,9 @@
 # expressive-session-middleware
 
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Build Status](https://img.shields.io/travis/dannym87/expressive-session-middleware.svg?branch=master)](https://travis-ci.org/dannym87/expressive-session-middleware)
+[![Downloads](https://img.shields.io/packagist/dt/damess/expressive-session-middleware.svg)](https://packagist.org/packages/damess/expressive-session-middleware)
+
 Simple session middleware for Zend Expressive
 
 ## Install

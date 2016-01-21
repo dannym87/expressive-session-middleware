@@ -34,13 +34,11 @@ Set up the pre-routing middleware.
 ```php
 return [
     'middleware_pipeline' => [
-        'pre_routing' => [
-            [
-                'middleware' => DaMess\Http\SessionMiddleware::class,
-            ]
-        ],
-        'post_routing' => [
-            
+        'always' => [
+            'middleware' => [
+                DaMess\Http\SessionMiddleware::class,
+            ],
+            'priority' => 10000,
         ],
     ],
 ];

@@ -8,6 +8,8 @@ use Psr\Http\Message\ServerRequestInterface;
 
 final class SessionMiddleware
 {
+    const KEY = 'session';
+
     /**
      * @var Session
      */
@@ -33,7 +35,7 @@ final class SessionMiddleware
             $this->session->start();
         }
 
-        $request = $request->withAttribute('session', $this->session);
+        $request = $request->withAttribute(self::KEY, $this->session);
 
         if ($next) {
             return $next($request, $response);

@@ -57,7 +57,7 @@ public function __invoke(ServerRequestInterface $request, ResponseInterface $res
     /**
      * @var \Aura\Session\Session $session
      */
-    $session = $request->getAttribute('session');
+    $session = $request->getAttribute(\DaMess\Http\SessionMiddleware::KEY);
 }
 ```
 

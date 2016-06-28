@@ -24,7 +24,7 @@ class SessionMiddlewareTest extends \PHPUnit_Framework_TestCase
     public function testSessionStarts()
     {
         $next = function(ServerRequestInterface $request) {
-            $this->assertInstanceOf(Session::class, $request->getAttribute('session'));
+            $this->assertInstanceOf(Session::class, $request->getAttribute(SessionMiddleware::KEY));
         };
 
         $this->session->isStarted()->shouldBeCalled();

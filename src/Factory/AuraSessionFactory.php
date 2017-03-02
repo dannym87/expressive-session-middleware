@@ -12,7 +12,7 @@ class AuraSessionFactory
      */
     protected $options = [
         'name'     => 'PHPSESSID',
-        'lifetime' => 7200,
+        'lifetime' => 14400,
         'path'     => null,
         'domain'   => null,
         'secure'   => false,

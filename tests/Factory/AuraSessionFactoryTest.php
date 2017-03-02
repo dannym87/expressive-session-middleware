@@ -33,7 +33,7 @@ class AuraSessionFactoryTest extends \PHPUnit_Framework_TestCase
         $session = $factory->__invoke($this->container->reveal());
 
         $this->assertSame([
-            'lifetime' => 7200,
+            'lifetime' => 14400,
             'path'     => null,
             'domain'   => null,
             'secure'   => false,
